@@ -27,5 +27,78 @@
             </ul>
         </div>
     </nav>
+
+    <section id="projects">
+
+        <details open>
+            <summary>
+                <h2>Digital Logic Design</h2>
+            </summary>
+            <hr>
+
+            <p class="project-blurb">
+                These projects were completed as part of
+                <a href="https://cooper.edu/engineering/courses/electrical-and-computer-engineering-undergraduate/ece-150" target="_blank">
+                    ECE 150: Digital Logic Design</a>, a course focused on designing combinational and sequential logic circuits.
+            </p>
+
+            <div class="project-card">
+                <h3>2-bit Arithmetic Logic Unit (ALU)</h3>
+                <br>
+                <p>
+                    Designed and implemented a 2-bit Arithmetic Logic Unit (ALU) using combinational logic with gates and multiplexers. It accepts two 2-bit inputs and a 4-bit operational code to produce a 2-bit output with an optional carry out (depends on the operation). This ALU performs eight operations, including binary subtraction with two's complement. The modular design allows for multiple ALUs to be chained to form larger units, such as a 4-bit ALU. 
+                </p>
+                <div class="project-image-row">
+                    <img src="/assets/ALU-breadboard.png" alt="2-bit ALU breadboard implementation" onclick="openImage(this.src, this.alt)">
+                    <img src="/assets/ALU-operation-table.png" alt="2-bit ALU operation table" onclick="openImage(this.src, this.alt)">
+                </div>
+                
+                <a href="/reports/ALU-report.pdf" target="_blank">View Report</a>
+            </div>
+
+            <div class="project-card">
+                <h3>RAM Project</h3>
+                <br>
+                <p>
+                    Designed and implemented a sequential logic circuit to read and write 4-bit words to a static SRAM chip. The design uses a Moore finite-state machine with debounced read and write buttons to control the memory, and parallel-out resistors to display the data. It cycles through the various states of the finite-state machine using a counter created with D flip flops.
+                </p>
+                <div class="project-image-row">
+                    <img src="/assets/RAM-breadboard.png" alt="2-bit ALU breadboard implementation" onclick="openImage(this.src, this.alt)">
+                    <img src="/assets/RAM-FBD.png" alt="2-bit ALU operation table" onclick="openImage(this.src, this.alt)">
+                </div>
+                <a href="/reports/RAM-report.pdf" target="_blank">View Report</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Two-Ball Pong</h3>
+                <br>
+                <p>
+                    Worked in a team of four to design and implement a hardware-based <a href="https://en.wikipedia.org/wiki/Pong" target="_blank">Pong</a> remix, featuring two balls instead of one. The game was displayed on an LED matrix and included user-controlled paddles, ball movement, collision detection, scoring, and dynamic ball speed. The design was modular, using counters, multiplexers, finite-state logic, and multiple clocks to manage game state and persistence of vision.
+                </p>
+                <div class="project-image-row2">
+                    <div class="left-image">
+                        <img src="/assets/PONG-FBD.png" alt="Pong FBD" onclick="openImage(this.src, this.alt)">
+                    </div>
+                    <div class="right-images">
+                        <img src="/assets/PONG-breadboard.png" alt="Pong breadboard" onclick="openImage(this.src, this.alt)">
+                        <img src="/assets/PONG-front.png" alt="Pong front view" onclick="openImage(this.src, this.alt)">
+                    </div>
+                </div>
+                
+                <a href="/reports/Pong-report.pdf" target="_blank">View Report</a> |
+                <a href="/assets/Pong-Promo.png" target="_blank">View Poster</a>
+            </div>
+
+        </details>
+
+    </section>
+
+    <dialog id="imageModal">
+        <img id="modalImage" alt="">
+    </dialog>
+
+    <script src="index.js"></script>
+
+
 </body>
 </html>

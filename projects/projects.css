@@ -48,7 +48,7 @@ body {
     text-decoration: none;
     font-size: 25px;
     color: #444;
-}
+}   
 
 .nav-links a:hover {
     color: #111;
@@ -56,4 +56,200 @@ body {
 
 .nav-links i {
     font-size: 18px;
+}
+
+#projects {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.project-card {
+  border: 1px solid #eaeaea;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.project-card h3 {
+  margin-top: 0;
+}
+
+.project-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.project-card p {
+  margin-bottom: 0.8rem;
+}
+
+.project-card a {
+  color: #0070f3;
+  text-decoration: none;
+}
+
+.project-card a:hover {
+  text-decoration: underline;
+}
+
+details {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary h2 {
+    display: inline;
+}
+
+summary::after {
+    content: " ▾";
+    font-size: 1.2rem;
+}
+
+details[open] summary::after {
+    content: " ▴";
+}
+
+.project-blurb {
+    margin: 1rem 0 2rem 0;
+    color: #444;
+}
+
+.project-image-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.project-image-row img {
+    width: 50%;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-image-row img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+#imageModal {
+    border: none;
+    padding: 0;
+    background: transparent;
+    margin-top: 20%;
+    margin-left: 50%;
+    margin: 4rem auto;      
+
+}
+
+#imageModal::backdrop {
+    background: rgba(0, 0, 0, 0.75);
+}
+
+#modalImage {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 10px;
+}
+
+.project-image-row2 {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* Left image */
+.left-image img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.left-image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Right stacked images */
+.right-images {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.right-images img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.right-images img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+    .project-image-row2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-image img,
+    .right-images img {
+        width: 90%;
+    }
+}
+
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .project-image-row2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-image img, .right-images img {
+        width: 90%;
+    }
+
+    .right-images {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+
+
+/* For Mobile */
+@media (max-width: 600px) {
+    .project-image-row {
+        flex-direction: column;
+    }
+
+    .project-image-row img {
+        width: 100%;
+    }
 }
